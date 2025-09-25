@@ -14,7 +14,8 @@ These changes extend NUFEB by:
 ---
 
 ## ⚙️ Installation
-git clone https://github.com/Liming547/NUFEB-MICP.git
-cd NUFEB-MICP
-bash ./install.sh
+```bash
+- git clone https://github.com/Liming547/NUFEB-MICP.git
+- cd NUFEB-MICP
+- bash ./install.sh
 
