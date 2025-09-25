@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a modified version of NUFEB (Newcastle University Frontiers in Environmental Biology, https://github.com/nufeb/NUFEB), a high-performance simulator for individual-based modelling of microbial communities.
+This repository contains a modified version of NUFEB (Newcastle University Frontiers in Environmental Biology, https://github.com/nufeb/NUFEB-2), a high-performance simulator for individual-based modelling of microbial communities.
 
 
 These changes extend NUFEB by:
