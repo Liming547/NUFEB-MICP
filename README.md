@@ -18,4 +18,14 @@ These changes extend NUFEB by:
 git clone https://github.com/Liming547/NUFEB-MICP.git
 cd NUFEB-MICP
 bash ./install.sh
+```
+
+---
+
+## Usage
+```bash
+cd example
+mpirun -np 8 ./nufeb_mpi -in micp.nufeb > log.txt
+```
+
 
