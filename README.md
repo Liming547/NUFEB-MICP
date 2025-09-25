@@ -23,6 +23,8 @@ bash ./install.sh
 ---
 
 ## Usage
+The example illustrates the bacterial growth and MICP process.
+
 ```bash
 cd example
 mpirun -np 8 ../nufeb_mpi -in micp.nufeb > log.txt
