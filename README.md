@@ -13,7 +13,7 @@ These changes extend NUFEB by:
 
 ---
 
-## ⚙️ Installation
+## Installation
 ```bash
 git clone https://github.com/Liming547/NUFEB-MICP.git
 cd NUFEB-MICP
