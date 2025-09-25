@@ -1,0 +1,64 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageDivergence.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageDotProduct.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageLogarithmicScale.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageLogic.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageMagnitude.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageMaskBits.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageMathematics.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageWeightedSum.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageDivergence.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageDotProduct.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageLogarithmicScale.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageLogic.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageMagnitude.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageMaskBits.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageMathematics.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Math/vtkImageWeightedSum.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Imaging/Math/vtkImagingMathModule.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkImagingMath"
+		],
+		"name" : "vtkImagingMath"
+	}
+}

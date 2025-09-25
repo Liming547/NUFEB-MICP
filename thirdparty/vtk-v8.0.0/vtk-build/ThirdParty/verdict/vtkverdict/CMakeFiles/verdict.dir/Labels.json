@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_EdgeMetric.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_GaussIntegration.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_HexMetric.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_KnifeMetric.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_PyramidMetric.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_QuadMetric.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_TetMetric.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_TriMetric.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/VerdictVector.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/verdict/vtkverdict/V_WedgeMetric.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkverdict"
+		],
+		"name" : "verdict"
+	}
+}

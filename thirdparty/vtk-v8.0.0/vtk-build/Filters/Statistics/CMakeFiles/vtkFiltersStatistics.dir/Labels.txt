@@ -1,0 +1,38 @@
+# Target labels
+ vtkFiltersStatistics
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkAutoCorrelativeStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkBivariateLinearTableThreshold.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkComputeQuartiles.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkContingencyStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkCorrelativeStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkDescriptiveStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkHighestDensityRegionsStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkExtractFunctionalBagPlot.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkKMeansDistanceFunctorCalculator.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkKMeansDistanceFunctor.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkKMeansStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkMultiCorrelativeStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkOrderStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkPCAStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkStatisticsAlgorithm.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkStrahlerMetric.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkStreamingStatistics.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkAutoCorrelativeStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkBivariateLinearTableThreshold.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkComputeQuartiles.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkContingencyStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkCorrelativeStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkDescriptiveStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkHighestDensityRegionsStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkExtractFunctionalBagPlot.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkKMeansDistanceFunctorCalculator.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkKMeansDistanceFunctor.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkKMeansStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkMultiCorrelativeStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkOrderStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkPCAStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkStatisticsAlgorithm.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkStrahlerMetric.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Statistics/vtkStreamingStatistics.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Filters/Statistics/vtkFiltersStatisticsModule.h

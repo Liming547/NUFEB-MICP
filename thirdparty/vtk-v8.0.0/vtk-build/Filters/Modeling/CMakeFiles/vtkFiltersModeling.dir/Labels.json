@@ -1,0 +1,178 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkAdaptiveSubdivisionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkBandedPolyDataContourFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkButterflySubdivisionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkContourLoopExtraction.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkCookieCutter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkDijkstraGraphGeodesicPath.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkDijkstraImageGeodesicPath.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkFillHolesFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkGeodesicPath.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkGraphGeodesicPath.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkLinearExtrusionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkLinearSubdivisionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkLoopSubdivisionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkPolyDataPointSampler.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkProjectedTexture.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkQuadRotationalExtrusionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkRibbonFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkRotationalExtrusionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkRuledSurfaceFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSelectEnclosedPoints.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSelectPolyData.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSpherePuzzleArrows.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSpherePuzzle.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSubdivideTetra.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkOutlineFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSectorSource.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkVolumeOfRevolutionFilter.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkAdaptiveSubdivisionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkBandedPolyDataContourFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkButterflySubdivisionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkContourLoopExtraction.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkCookieCutter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkDijkstraGraphGeodesicPath.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkDijkstraImageGeodesicPath.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkFillHolesFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkGeodesicPath.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkGraphGeodesicPath.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkLinearExtrusionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkLinearSubdivisionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkLoopSubdivisionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkPolyDataPointSampler.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkProjectedTexture.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkQuadRotationalExtrusionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkRibbonFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkRotationalExtrusionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkRuledSurfaceFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSelectEnclosedPoints.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSelectPolyData.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSpherePuzzleArrows.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSpherePuzzle.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSubdivideTetra.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkOutlineFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkSectorSource.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Filters/Modeling/vtkVolumeOfRevolutionFilter.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Filters/Modeling/vtkFiltersModelingModule.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkFiltersModeling"
+		],
+		"name" : "vtkFiltersModeling"
+	}
+}

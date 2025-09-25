@@ -1,0 +1,28 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkColorSeries.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkNamedColors.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkColorSeries.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkNamedColors.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Common/Color/vtkCommonColorModule.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkCommonColor"
+		],
+		"name" : "vtkCommonColor"
+	}
+}

@@ -1,0 +1,40 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkImageViewer2.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkImageViewer.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkResliceImageViewer.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkResliceImageViewerMeasurements.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkImageViewer2.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkImageViewer.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkResliceImageViewer.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Interaction/Image/vtkResliceImageViewerMeasurements.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Interaction/Image/vtkInteractionImageModule.h"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkInteractionImage"
+		],
+		"name" : "vtkInteractionImage"
+	}
+}

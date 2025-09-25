@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/sqlite/vtksqlite/vtk_sqlite3.c"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtksqlite"
+		],
+		"name" : "vtksqlite"
+	}
+}

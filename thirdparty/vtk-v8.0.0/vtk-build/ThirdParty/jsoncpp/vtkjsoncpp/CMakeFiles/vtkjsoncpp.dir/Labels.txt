@@ -1,0 +1,6 @@
+# Target labels
+ vtkjsoncpp
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/jsoncpp/vtkjsoncpp/json/json-forwards.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/jsoncpp/vtkjsoncpp/json/json.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/jsoncpp/vtkjsoncpp/jsoncpp.cpp

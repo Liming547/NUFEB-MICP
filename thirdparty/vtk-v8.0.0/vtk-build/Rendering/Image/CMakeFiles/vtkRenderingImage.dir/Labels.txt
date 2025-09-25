@@ -1,0 +1,12 @@
+# Target labels
+ vtkRenderingImage
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkDepthImageToPointCloud.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkImageResliceMapper.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkImageSliceCollection.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkImageStack.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkDepthImageToPointCloud.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkImageResliceMapper.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkImageSliceCollection.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Rendering/Image/vtkImageStack.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Rendering/Image/vtkRenderingImageModule.h

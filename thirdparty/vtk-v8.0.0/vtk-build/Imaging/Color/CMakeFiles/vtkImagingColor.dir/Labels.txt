@@ -1,0 +1,24 @@
+# Target labels
+ vtkImagingColor
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageHSIToRGB.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageHSVToRGB.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageYIQToRGB.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageLuminance.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageMapToRGBA.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageMapToWindowLevelColors.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageQuantizeRGBToIndex.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageRGBToHSI.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageRGBToHSV.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageRGBToYIQ.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageHSIToRGB.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageHSVToRGB.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageYIQToRGB.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageLuminance.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageMapToRGBA.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageMapToWindowLevelColors.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageQuantizeRGBToIndex.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageRGBToHSI.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageRGBToHSV.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Imaging/Color/vtkImageRGBToYIQ.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Imaging/Color/vtkImagingColorModule.h

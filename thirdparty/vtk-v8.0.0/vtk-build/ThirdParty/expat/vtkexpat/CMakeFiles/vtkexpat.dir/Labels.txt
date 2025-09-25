@@ -1,0 +1,8 @@
+# Target labels
+ vtkexpat
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmlparse.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmlrole.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmltok.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmltok_impl.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmltok_ns.c

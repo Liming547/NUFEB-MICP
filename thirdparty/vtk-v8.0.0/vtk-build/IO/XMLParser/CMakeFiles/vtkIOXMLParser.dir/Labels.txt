@@ -1,0 +1,10 @@
+# Target labels
+ vtkIOXMLParser
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/XMLParser/vtkXMLDataParser.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/XMLParser/vtkXMLParser.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/XMLParser/vtkXMLUtilities.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/XMLParser/vtkXMLDataParser.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/XMLParser/vtkXMLParser.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/XMLParser/vtkXMLUtilities.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/IO/XMLParser/vtkIOXMLParserModule.h

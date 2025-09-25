@@ -1,0 +1,16 @@
+# Target labels
+ vtkViewsCore
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkConvertSelectionDomain.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkDataRepresentation.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkEmptyRepresentation.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkRenderViewBase.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkView.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkViewTheme.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkConvertSelectionDomain.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkDataRepresentation.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkEmptyRepresentation.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkRenderViewBase.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkView.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Views/Core/vtkViewTheme.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Views/Core/vtkViewsCoreModule.h

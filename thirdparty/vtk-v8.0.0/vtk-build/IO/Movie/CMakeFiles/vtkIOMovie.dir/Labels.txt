@@ -1,0 +1,9 @@
+# Target labels
+ vtkIOMovie
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/Movie/vtkGenericMovieWriter.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/Movie/vtkOggTheoraWriter.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/IO/Movie/vtkIOMovieConfigure.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/Movie/vtkGenericMovieWriter.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/Movie/vtkOggTheoraWriter.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/IO/Movie/vtkIOMovieModule.h

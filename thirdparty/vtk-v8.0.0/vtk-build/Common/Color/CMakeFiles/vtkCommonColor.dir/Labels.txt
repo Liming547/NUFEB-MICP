@@ -1,0 +1,8 @@
+# Target labels
+ vtkCommonColor
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkColorSeries.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkNamedColors.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkColorSeries.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Common/Color/vtkNamedColors.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Common/Color/vtkCommonColorModule.h

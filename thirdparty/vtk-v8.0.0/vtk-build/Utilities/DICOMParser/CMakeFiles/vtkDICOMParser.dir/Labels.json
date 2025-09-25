@@ -1,0 +1,22 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/DICOMParser/DICOMFile.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/DICOMParser/DICOMParser.cxx"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/DICOMParser/DICOMAppHelper.cxx"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkDICOMParser"
+		],
+		"name" : "vtkDICOMParser"
+	}
+}

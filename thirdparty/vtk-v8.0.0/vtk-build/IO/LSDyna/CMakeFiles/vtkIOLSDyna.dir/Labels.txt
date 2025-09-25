@@ -1,0 +1,14 @@
+# Target labels
+ vtkIOLSDyna
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaPart.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaPartCollection.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaReader.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaSummaryParser.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/private/LSDynaFamily.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/private/LSDynaMetaData.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaPart.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaPartCollection.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaReader.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/IO/LSDyna/vtkLSDynaSummaryParser.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/IO/LSDyna/vtkIOLSDynaModule.h

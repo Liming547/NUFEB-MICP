@@ -1,0 +1,22 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/jsoncpp/vtkjsoncpp/json/json-forwards.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/jsoncpp/vtkjsoncpp/json/json.h"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/jsoncpp/vtkjsoncpp/jsoncpp.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkjsoncpp"
+		],
+		"name" : "vtkjsoncpp"
+	}
+}

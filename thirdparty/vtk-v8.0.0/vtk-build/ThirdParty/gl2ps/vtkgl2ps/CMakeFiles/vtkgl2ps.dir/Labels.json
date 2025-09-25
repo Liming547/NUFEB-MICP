@@ -1,0 +1,16 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/gl2ps/vtkgl2ps/gl2ps.c"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkgl2ps"
+		],
+		"name" : "vtkgl2ps"
+	}
+}

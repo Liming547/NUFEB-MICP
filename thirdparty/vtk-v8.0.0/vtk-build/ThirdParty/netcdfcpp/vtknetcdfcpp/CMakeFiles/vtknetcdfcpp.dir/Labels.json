@@ -1,0 +1,19 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/netcdfcpp/vtknetcdfcpp/cxx/netcdf.cpp"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/netcdfcpp/vtknetcdfcpp/cxx/ncvalues.cpp"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtknetcdfcpp"
+		],
+		"name" : "vtknetcdfcpp"
+	}
+}

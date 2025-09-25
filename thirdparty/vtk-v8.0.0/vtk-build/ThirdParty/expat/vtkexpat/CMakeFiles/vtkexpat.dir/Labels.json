@@ -1,0 +1,28 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmlparse.c"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmlrole.c"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmltok.c"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmltok_impl.c"
+		},
+		{
+			"file" : "/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/expat/vtkexpat/lib/xmltok_ns.c"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"vtkexpat"
+		],
+		"name" : "vtkexpat"
+	}
+}

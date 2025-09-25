@@ -1,0 +1,123 @@
+# NUFEB simulation - biofilm growth with heterotrophic bacteria and EPS 
+
+#-------------------------------------------General settings-------------------------------------------#
+
+units si                                   # using si units
+
+processors      * * *                      # processor grid
+
+comm_modify     vel yes cutoff 2e-6        # communicate velocities for ghost atoms
+                                           # guarantee that enough atoms are
+                                           # communicated to correctly compute
+
+#------------------------------Microbes, nutrients and simulation box-----------------------------------#
+
+atom_style      coccus                     # using nufeb coccus atom style
+atom_modify     map array sort 1000 1e-6    # map array: find atoms using indices
+		                            # sort 1000 1e-6: sort every 1000 steps with 1e-6 binsize
+boundary        pp pp ff		    # periodic domain boundaries in x and y fixed boundary in z
+
+read_data bacteria.in
+                                                          
+
+group           het   type 1               # assign type 1 atoms to het group
+group           eps   type 2               # assign type 2 atoms to eps group
+group           caco3   type 3
+
+
+
+neighbor        5e-7 bin                   # setting neighbour skin distance and style
+neigh_modify    check yes                  # rebuild neighbour list if any atom
+                                           # had moved more than half the skin distance
+
+#-------------------------------------------------Grid----------------------------------------------#
+# use nufeb/chemostat grid style, define substrate types and diffusion grid size 
+grid_style      nufeb/chemostat 7 urease urea Ca sub o2 no2 no3 5e-6  
+
+grid_modify     set sub  pp pp nd  1.3e-5 1.3e-5
+grid_modify     set o2   pp pp nd  1e-4 1e-4
+grid_modify     set no2  pp pp nd  1e-4 1e-4
+grid_modify     set no3  pp pp nd  1e-4 1e-4
+grid_modify     set urease  pp pp nn  0 0    
+grid_modify     set urea  pp pp nn 30.03 0   
+grid_modify     set Ca  pp pp nn 20.04 0    
+
+#------------------------------------------Biological processes------------------------------------------#
+
+# heterotrophs growth
+fix growth_het het nufeb/growth/het sub 3.5e-5 o2 0 no2 0 no3 0 growth 0.00028 yield 0.61 decay 0.00002 epsyield 0.18 anoxic 0.0 epsdens 33 Cmass 6.01e-04 Nmass 2.53
+
+# heterotrophs division 
+fix div het nufeb/division/coccus 1.36e-6 33 123421
+
+# EPS extraction from heterotrophs
+fix eps_ext het nufeb/eps_extract 2 eps 1.3 33 567418 3169 18.6 caco3
+
+#------------------------------------------Physical processes------------------------------------------#
+
+# contact force between atoms
+pair_style  gran/hooke/history 1e-4 NULL 1e-5 NULL 0.0 1
+pair_coeff  * *
+
+# contact force between atoms and domain boundary
+fix zw all wall/gran hooke/history 2000 NULL 500.0 NULL 1.5 0 zplane  0.0  0.5e-04 
+# viscous damping force between atoms
+fix vis all viscous 1e-5
+
+# NVE integration with maximum distance limit
+fix nve all nve/limit 1e-8
+
+#------------------------------------------Post-physical processes------------------------------------------#
+
+fix coeff_sub all nufeb/diffusion_coeff sub ratio 0.8
+
+#------------------------------------------Chemical processes--------------------------------------------#
+fix diff_sub all nufeb/diffusion_reaction sub 1.6e-9  
+fix diff_urea all nufeb/diffusion_reaction urea    1.38e-9           # Ref:Nanne E E, Aucoin C P, Leonard E F. ASAIO journal, 2010, 56(3): 151-156.
+fix diff_Ca all nufeb/diffusion_reaction Ca        1.3e-9            # Ref: Ribeiro A C F, Barros M C F, Teles A S N, et al. Electrochimica Acta, 2008, 54(2): 192-196.
+fix diff_urease all nufeb/diffusion_reaction urease  4e-11           # Ref: Muddana H S, Sengupta S, Mallouk T E, et al. Substrate catalysis enhances single-enzyme diffusion[J]. Journal of the American Chemical Society, 2010, 132(7): 2110-2111.
+
+#------------------------------------------Computations and Outputs--------------------------------------#
+variable caco3count equal count(caco3)
+variable hetcount equal count(het)
+variable epscount equal count(eps)
+
+
+
+# compute total mass
+variable masscaco3 equal "mass(caco3)"
+variable masshet equal "mass(het)"
+
+#variable boxvol equal vol
+compute 1 all nufeb/ave_conc 
+variable urease_conc equal c_1[1]
+variable urea_conc equal c_1[2]
+
+
+variable densitycaco3 equal "v_masscaco3/1.25e-13"
+variable hetavgmass equal "v_masshet/v_hetcount"
+
+fix fprint all print 1 &
+"${densitycaco3} ${hetcount} ${masshet} ${hetavgmass} ${urease_conc} ${urea_conc}" &
+file profile.txt title &
+"caco3_density(g/L) het_count het_mass het_avgmass urease_conc urea_conc"
+
+# dump vtk files to /vtk folder, require build NUFEB with vtk option
+#shell mkdir vtk
+#dump du1 all vtk 5 vtk/dump*.vtu id type diameter
+#dump du2 all grid/vtk 5 vtk/dump_%_*.vti con rea den gro
+
+# screen and log outputs
+thermo_style custom step cpu atoms v_densitycaco3 v_urea_conc
+thermo 1
+
+#----------------------------------------------Run------------------------------------------------------#
+
+# issue run command, define timesteps for physical and chemical processes
+run_style nufeb diffdt 1e-4 difftol 1e-6 pairdt 1e-2 pairtol 1 pairmax 300 diffmax 5000
+
+
+timestep 100
+
+dump id all custom 50 all.dump id type diameter mass x y z fx fy fz
+run 500

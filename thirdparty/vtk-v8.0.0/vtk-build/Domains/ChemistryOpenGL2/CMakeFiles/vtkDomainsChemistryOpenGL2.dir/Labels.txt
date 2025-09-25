@@ -1,0 +1,8 @@
+# Target labels
+ vtkDomainsChemistryOpenGL2
+# Source files and their labels
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Domains/ChemistryOpenGL2/vtkOpenGLMoleculeMapper.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Domains/ChemistryOpenGL2/vtkDomainsChemistryOpenGL2ObjectFactory.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Domains/ChemistryOpenGL2/vtkOpenGLMoleculeMapper.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Domains/ChemistryOpenGL2/vtkDomainsChemistryOpenGL2ObjectFactory.h
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Domains/ChemistryOpenGL2/vtkDomainsChemistryOpenGL2Module.h

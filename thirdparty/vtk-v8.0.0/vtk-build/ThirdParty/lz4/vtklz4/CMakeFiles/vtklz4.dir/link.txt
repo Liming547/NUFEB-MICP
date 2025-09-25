@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -w -w -g  -Wl,--no-undefined -lc   -shared -Wl,-soname,libvtklz4-8.0.so.1 -o ../../../lib/libvtklz4-8.0.so.1 CMakeFiles/vtklz4.dir/lib/lz4.c.o CMakeFiles/vtklz4.dir/lib/lz4hc.c.o CMakeFiles/vtklz4.dir/lib/lz4frame.c.o CMakeFiles/vtklz4.dir/lib/xxhash.c.o 

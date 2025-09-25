@@ -1,0 +1,1765 @@
+Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6eec2/fast && /usr/bin/make -f CMakeFiles/cmTC_6eec2.dir/build.make CMakeFiles/cmTC_6eec2.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6eec2.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_6eec2.dir/src.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_6eec2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6eec2.dir/link.txt --verbose=1
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_6eec2.dir/src.c.o  -o cmTC_6eec2 
+/usr/bin/ld: CMakeFiles/cmTC_6eec2.dir/src.c.o: in function `main':
+src.c:(.text+0x46): undefined reference to `pthread_create'
+/usr/bin/ld: src.c:(.text+0x52): undefined reference to `pthread_detach'
+/usr/bin/ld: src.c:(.text+0x63): undefined reference to `pthread_join'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6eec2.dir/build.make:87: cmTC_6eec2] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6eec2/fast] Error 2
+
+
+Source file was:
+#include <pthread.h>
+
+void* test_func(void* data)
+{
+  return data;
+}
+
+int main(void)
+{
+  pthread_t thread;
+  pthread_create(&thread, NULL, test_func, NULL);
+  pthread_detach(thread);
+  pthread_join(thread, NULL);
+  pthread_atfork(NULL, NULL, NULL);
+  pthread_exit(NULL);
+
+  return 0;
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1a209/fast && /usr/bin/make -f CMakeFiles/cmTC_1a209.dir/build.make CMakeFiles/cmTC_1a209.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1a209.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_1a209.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_1a209
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1a209.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_1a209.dir/CheckFunctionExists.c.o  -o cmTC_1a209  -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_1a209.dir/build.make:87: cmTC_1a209] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1a209/fast] Error 2
+
+
+
+Determining if the function getsockname exists in the socket failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_df854/fast && /usr/bin/make -f CMakeFiles/cmTC_df854.dir/build.make CMakeFiles/cmTC_df854.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_df854.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getsockname   -o CMakeFiles/cmTC_df854.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_df854
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_df854.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=getsockname   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_df854.dir/CheckFunctionExists.c.o  -o cmTC_df854  -lsocket 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_df854.dir/build.make:87: cmTC_df854] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_df854/fast] Error 2
+
+
+
+Checking whether C++ compiler has '__int64' failed to compile with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_393cc/fast && /usr/bin/make -f CMakeFiles/cmTC_393cc.dir/build.make CMakeFiles/cmTC_393cc.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_393cc.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/c++  -DTEST_KWSYS_CXX_HAS___INT64   -o CMakeFiles/cmTC_393cc.dir/kwsysPlatformTestsCXX.cxx.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:24:1: error: ‘__int64’ does not name a type
+   24 | __int64 f(__int64 n)
+      | ^~~~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:30:3: error: ‘__int64’ was not declared in this scope
+   30 |   __int64 n = 0;
+      |   ^~~~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:31:29: error: ‘n’ was not declared in this scope
+   31 |   return static_cast<int>(f(n));
+      |                             ^
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:31:27: error: ‘f’ was not declared in this scope
+   31 |   return static_cast<int>(f(n));
+      |                           ^
+make[1]: *** [CMakeFiles/cmTC_393cc.dir/build.make:66: CMakeFiles/cmTC_393cc.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_393cc/fast] Error 2
+
+
+
+Checking whether CXX compiler has environ in stdlib.h failed to compile with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a157a/fast && /usr/bin/make -f CMakeFiles/cmTC_a157a.dir/build.make CMakeFiles/cmTC_a157a.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_a157a.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/c++  -DTEST_KWSYS_CXX_HAS_ENVIRON_IN_STDLIB_H   -o CMakeFiles/cmTC_a157a.dir/kwsysPlatformTestsCXX.cxx.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:196:13: error: ‘environ’ was not declared in this scope; did you mean ‘union’?
+  196 |   char* e = environ[0];
+      |             ^~~~~~~
+      |             union
+make[1]: *** [CMakeFiles/cmTC_a157a.dir/build.make:66: CMakeFiles/cmTC_a157a.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a157a/fast] Error 2
+
+
+
+Checking whether CXX compiler struct stat has st_mtimespec member failed to compile with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9f78b/fast && /usr/bin/make -f CMakeFiles/cmTC_9f78b.dir/build.make CMakeFiles/cmTC_9f78b.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9f78b.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/c++  -DTEST_KWSYS_CXX_STAT_HAS_ST_MTIMESPEC   -o CMakeFiles/cmTC_9f78b.dir/kwsysPlatformTestsCXX.cxx.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:57:15: error: ‘struct stat’ has no member named ‘st_mtimespec’
+   57 |   (void)stat1.st_mtimespec.tv_sec;
+      |               ^~~~~~~~~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:58:15: error: ‘struct stat’ has no member named ‘st_mtimespec’
+   58 |   (void)stat1.st_mtimespec.tv_nsec;
+      |               ^~~~~~~~~~~~
+make[1]: *** [CMakeFiles/cmTC_9f78b.dir/build.make:66: CMakeFiles/cmTC_9f78b.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9f78b/fast] Error 2
+
+
+
+Checking whether CXX compiler has _atoi64 failed to compile with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_65e32/fast && /usr/bin/make -f CMakeFiles/cmTC_65e32.dir/build.make CMakeFiles/cmTC_65e32.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_65e32.dir/kwsysPlatformTestsCXX.cxx.o
+/usr/bin/c++  -DTEST_KWSYS_CXX_HAS__ATOI64   -o CMakeFiles/cmTC_65e32.dir/kwsysPlatformTestsCXX.cxx.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx: In function ‘int main()’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/Utilities/KWSys/vtksys/kwsysPlatformTestsCXX.cxx:252:27: error: ‘_atoi64’ was not declared in this scope; did you mean ‘atoi’?
+  252 |   return static_cast<int>(_atoi64(str));
+      |                           ^~~~~~~
+      |                           atoi
+make[1]: *** [CMakeFiles/cmTC_65e32.dir/build.make:66: CMakeFiles/cmTC_65e32.dir/kwsysPlatformTestsCXX.cxx.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/Utilities/KWSys/vtksys/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_65e32/fast] Error 2
+
+
+
+Determining if the off_t exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9df2d/fast && /usr/bin/make -f CMakeFiles/cmTC_9df2d.dir/build.make CMakeFiles/cmTC_9df2d.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9df2d.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_9df2d.dir/CheckSymbolExists.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: expected expression before ‘off_t’
+    8 |   return ((int*)(&off_t))[argc];
+      |                   ^~~~~
+make[1]: *** [CMakeFiles/cmTC_9df2d.dir/build.make:66: CMakeFiles/cmTC_9df2d.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9df2d/fast] Error 2
+
+
+File /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef off_t
+  return ((int*)(&off_t))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the size_t exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_30cef/fast && /usr/bin/make -f CMakeFiles/cmTC_30cef.dir/build.make CMakeFiles/cmTC_30cef.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_30cef.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_30cef.dir/CheckSymbolExists.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:19: error: expected expression before ‘size_t’
+    8 |   return ((int*)(&size_t))[argc];
+      |                   ^~~~~~
+make[1]: *** [CMakeFiles/cmTC_30cef.dir/build.make:66: CMakeFiles/cmTC_30cef.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_30cef/fast] Error 2
+
+
+File /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <sys/types.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef size_t
+  return ((int*)(&size_t))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the include file io.h exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c828e/fast && /usr/bin/make -f CMakeFiles/cmTC_c828e.dir/build.make CMakeFiles/cmTC_c828e.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c828e.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing    -o CMakeFiles/cmTC_c828e.dir/CheckIncludeFile.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: io.h: No such file or directory
+    1 | #include <io.h>
+      |          ^~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c828e.dir/build.make:66: CMakeFiles/cmTC_c828e.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c828e/fast] Error 2
+
+
+
+Determining size of INT8 failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ae314/fast && /usr/bin/make -f CMakeFiles/cmTC_ae314.dir/build.make CMakeFiles/cmTC_ae314.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ae314.dir/int8.c.o
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing    -o CMakeFiles/cmTC_ae314.dir/int8.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int8.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int8.c:23:22: error: ‘INT8’ undeclared here (not in a function); did you mean ‘INT8_C’?
+   23 | #define SIZE (sizeof(INT8))
+      |                      ^~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int8.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_ae314.dir/build.make:66: CMakeFiles/cmTC_ae314.dir/int8.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ae314/fast] Error 2
+
+
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int8.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT8))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT16 failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b2497/fast && /usr/bin/make -f CMakeFiles/cmTC_b2497.dir/build.make CMakeFiles/cmTC_b2497.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b2497.dir/int16.c.o
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing    -o CMakeFiles/cmTC_b2497.dir/int16.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int16.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int16.c:23:22: error: ‘INT16’ undeclared here (not in a function); did you mean ‘INT16_C’?
+   23 | #define SIZE (sizeof(INT16))
+      |                      ^~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int16.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_b2497.dir/build.make:66: CMakeFiles/cmTC_b2497.dir/int16.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b2497/fast] Error 2
+
+
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int16.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT16))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining size of INT32 failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_54400/fast && /usr/bin/make -f CMakeFiles/cmTC_54400.dir/build.make CMakeFiles/cmTC_54400.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_54400.dir/int32.c.o
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing    -o CMakeFiles/cmTC_54400.dir/int32.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int32.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int32.c:23:22: error: ‘INT32’ undeclared here (not in a function); did you mean ‘INT32_C’?
+   23 | #define SIZE (sizeof(INT32))
+      |                      ^~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int32.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_54400.dir/build.make:66: CMakeFiles/cmTC_54400.dir/int32.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_54400/fast] Error 2
+
+
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/int32.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(INT32))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function setmode exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_518a0/fast && /usr/bin/make -f CMakeFiles/cmTC_518a0.dir/build.make CMakeFiles/cmTC_518a0.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_518a0.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing -DCHECK_FUNCTION_EXISTS=setmode   -o CMakeFiles/cmTC_518a0.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_518a0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_518a0.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing -DCHECK_FUNCTION_EXISTS=setmode    -rdynamic CMakeFiles/cmTC_518a0.dir/CheckFunctionExists.c.o  -o cmTC_518a0 
+/usr/bin/ld: CMakeFiles/cmTC_518a0.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `setmode'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_518a0.dir/build.make:87: cmTC_518a0] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_518a0/fast] Error 2
+
+
+
+Determining if the function jbg_newlen exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7b503/fast && /usr/bin/make -f CMakeFiles/cmTC_7b503.dir/build.make CMakeFiles/cmTC_7b503.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7b503.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing -DCHECK_FUNCTION_EXISTS=jbg_newlen   -o CMakeFiles/cmTC_7b503.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_7b503
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7b503.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -Wall -Winline -W -Wformat-security -Wpointer-arith -Wdisabled-optimization -Wno-unknown-pragmas -Wdeclaration-after-statement -fstrict-aliasing -DCHECK_FUNCTION_EXISTS=jbg_newlen    -rdynamic CMakeFiles/cmTC_7b503.dir/CheckFunctionExists.c.o  -o cmTC_7b503 
+/usr/bin/ld: CMakeFiles/cmTC_7b503.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `jbg_newlen'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_7b503.dir/build.make:87: cmTC_7b503] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7b503/fast] Error 2
+
+
+
+Determining if files jni.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_bc47f/fast && /usr/bin/make -f CMakeFiles/cmTC_bc47f.dir/build.make CMakeFiles/cmTC_bc47f.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_bc47f.dir/HAVE_JNI_H.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_bc47f.dir/HAVE_JNI_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_JNI_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_JNI_H.c:2:10: fatal error: jni.h: No such file or directory
+    2 | #include <jni.h>
+      |          ^~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_bc47f.dir/build.make:66: CMakeFiles/cmTC_bc47f.dir/HAVE_JNI_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_bc47f/fast] Error 2
+
+
+Source:
+/* */
+#include <jni.h>
+
+
+int main(void){return 0;}
+
+Determining if the PTHREAD_MUTEX_RECURSIVE exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_918b2/fast && /usr/bin/make -f CMakeFiles/cmTC_918b2.dir/build.make CMakeFiles/cmTC_918b2.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_918b2.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_918b2.dir/CheckSymbolExists.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:8:18: error: lvalue required as unary ‘&’ operand
+    8 |   return ((int*)(&PTHREAD_MUTEX_RECURSIVE))[argc];
+      |                  ^
+make[1]: *** [CMakeFiles/cmTC_918b2.dir/build.make:66: CMakeFiles/cmTC_918b2.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_918b2/fast] Error 2
+
+
+File /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef PTHREAD_MUTEX_RECURSIVE
+  return ((int*)(&PTHREAD_MUTEX_RECURSIVE))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the function WSAStartup exists in the ws2_32;m;dl failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8debe/fast && /usr/bin/make -f CMakeFiles/cmTC_8debe.dir/build.make CMakeFiles/cmTC_8debe.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8debe.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=WSAStartup   -o CMakeFiles/cmTC_8debe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8debe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8debe.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=WSAStartup   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_8debe.dir/CheckFunctionExists.c.o  -o cmTC_8debe  -lws2_32 -lm -ldl 
+/usr/bin/ld: cannot find -lws2_32
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8debe.dir/build.make:87: cmTC_8debe] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8debe/fast] Error 2
+
+
+
+Determining if the function gethostbyname exists in the wsock32;m;dl failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_deba2/fast && /usr/bin/make -f CMakeFiles/cmTC_deba2.dir/build.make CMakeFiles/cmTC_deba2.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_deba2.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=gethostbyname   -o CMakeFiles/cmTC_deba2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_deba2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_deba2.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=gethostbyname   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_deba2.dir/CheckFunctionExists.c.o  -o cmTC_deba2  -lwsock32 -lm -ldl 
+/usr/bin/ld: cannot find -lwsock32
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_deba2.dir/build.make:87: cmTC_deba2] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_deba2/fast] Error 2
+
+
+
+Determining if the function gethostname exists in the ucb;m;dl failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_78dd7/fast && /usr/bin/make -f CMakeFiles/cmTC_78dd7.dir/build.make CMakeFiles/cmTC_78dd7.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_78dd7.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=gethostname   -o CMakeFiles/cmTC_78dd7.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_78dd7
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_78dd7.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=gethostname   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_78dd7.dir/CheckFunctionExists.c.o  -o cmTC_78dd7  -lucb -lm -ldl 
+/usr/bin/ld: cannot find -lucb
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_78dd7.dir/build.make:87: cmTC_78dd7] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_78dd7/fast] Error 2
+
+
+
+Determining if the function connect exists in the socket;m;dl failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dfbc1/fast && /usr/bin/make -f CMakeFiles/cmTC_dfbc1.dir/build.make CMakeFiles/cmTC_dfbc1.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dfbc1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=connect   -o CMakeFiles/cmTC_dfbc1.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_dfbc1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dfbc1.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=connect   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_dfbc1.dir/CheckFunctionExists.c.o  -o cmTC_dfbc1  -lsocket -lm -ldl 
+/usr/bin/ld: cannot find -lsocket
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_dfbc1.dir/build.make:87: cmTC_dfbc1] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_dfbc1/fast] Error 2
+
+
+
+Determining if the function clock_gettime exists in the posix4 failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_aa9cf/fast && /usr/bin/make -f CMakeFiles/cmTC_aa9cf.dir/build.make CMakeFiles/cmTC_aa9cf.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_aa9cf.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=clock_gettime   -o CMakeFiles/cmTC_aa9cf.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_aa9cf
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aa9cf.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=clock_gettime   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_aa9cf.dir/CheckFunctionExists.c.o  -o cmTC_aa9cf  -lposix4 -lm -ldl 
+/usr/bin/ld: cannot find -lposix4
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_aa9cf.dir/build.make:87: cmTC_aa9cf] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_aa9cf/fast] Error 2
+
+
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;mach/mach_time.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_409aa/fast && /usr/bin/make -f CMakeFiles/cmTC_409aa.dir/build.make CMakeFiles/cmTC_409aa.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_409aa.dir/H5_HAVE_MACH_MACH_TIME_H.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_409aa.dir/H5_HAVE_MACH_MACH_TIME_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_MACH_MACH_TIME_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_MACH_MACH_TIME_H.c:14:10: fatal error: mach/mach_time.h: No such file or directory
+   14 | #include <mach/mach_time.h>
+      |          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_409aa.dir/build.make:66: CMakeFiles/cmTC_409aa.dir/H5_HAVE_MACH_MACH_TIME_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_409aa/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <stddef.h>
+#include <setjmp.h>
+#include <features.h>
+#include <dirent.h>
+#include <stdint.h>
+#include <mach/mach_time.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;io.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_485e5/fast && /usr/bin/make -f CMakeFiles/cmTC_485e5.dir/build.make CMakeFiles/cmTC_485e5.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_485e5.dir/H5_HAVE_IO_H.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_485e5.dir/H5_HAVE_IO_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_IO_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_IO_H.c:14:10: fatal error: io.h: No such file or directory
+   14 | #include <io.h>
+      |          ^~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_485e5.dir/build.make:66: CMakeFiles/cmTC_485e5.dir/H5_HAVE_IO_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_485e5/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <stddef.h>
+#include <setjmp.h>
+#include <features.h>
+#include <dirent.h>
+#include <stdint.h>
+#include <io.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;winsock2.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_7f899/fast && /usr/bin/make -f CMakeFiles/cmTC_7f899.dir/build.make CMakeFiles/cmTC_7f899.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_7f899.dir/H5_HAVE_WINSOCK2_H.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_7f899.dir/H5_HAVE_WINSOCK2_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_WINSOCK2_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_WINSOCK2_H.c:14:10: fatal error: winsock2.h: No such file or directory
+   14 | #include <winsock2.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_7f899.dir/build.make:66: CMakeFiles/cmTC_7f899.dir/H5_HAVE_WINSOCK2_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_7f899/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <stddef.h>
+#include <setjmp.h>
+#include <features.h>
+#include <dirent.h>
+#include <stdint.h>
+#include <winsock2.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;globus/common.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_d327e/fast && /usr/bin/make -f CMakeFiles/cmTC_d327e.dir/build.make CMakeFiles/cmTC_d327e.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_d327e.dir/H5_HAVE_GLOBUS_COMMON_H.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_d327e.dir/H5_HAVE_GLOBUS_COMMON_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_GLOBUS_COMMON_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_GLOBUS_COMMON_H.c:15:10: fatal error: globus/common.h: No such file or directory
+   15 | #include <globus/common.h>
+      |          ^~~~~~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_d327e.dir/build.make:66: CMakeFiles/cmTC_d327e.dir/H5_HAVE_GLOBUS_COMMON_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_d327e/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <stddef.h>
+#include <setjmp.h>
+#include <features.h>
+#include <dirent.h>
+#include <stdint.h>
+#include <sys/timeb.h>
+#include <globus/common.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pdb.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ca1ea/fast && /usr/bin/make -f CMakeFiles/cmTC_ca1ea.dir/build.make CMakeFiles/cmTC_ca1ea.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ca1ea.dir/H5_HAVE_PDB_H.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_ca1ea.dir/H5_HAVE_PDB_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_PDB_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_PDB_H.c:15:10: fatal error: pdb.h: No such file or directory
+   15 | #include <pdb.h>
+      |          ^~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_ca1ea.dir/build.make:66: CMakeFiles/cmTC_ca1ea.dir/H5_HAVE_PDB_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ca1ea/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <stddef.h>
+#include <setjmp.h>
+#include <features.h>
+#include <dirent.h>
+#include <stdint.h>
+#include <sys/timeb.h>
+#include <pdb.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/resource.h;sys/time.h;unistd.h;sys/ioctl.h;sys/stat.h;sys/socket.h;sys/types.h;stddef.h;setjmp.h;features.h;dirent.h;stdint.h;sys/timeb.h;pthread.h;srbclient.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dc352/fast && /usr/bin/make -f CMakeFiles/cmTC_dc352.dir/build.make CMakeFiles/cmTC_dc352.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_dc352.dir/H5_HAVE_SRBCLIENT_H.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_dc352.dir/H5_HAVE_SRBCLIENT_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_SRBCLIENT_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/H5_HAVE_SRBCLIENT_H.c:16:10: fatal error: srbclient.h: No such file or directory
+   16 | #include <srbclient.h>
+      |          ^~~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_dc352.dir/build.make:66: CMakeFiles/cmTC_dc352.dir/H5_HAVE_SRBCLIENT_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_dc352/fast] Error 2
+
+
+Source:
+/* */
+#include <sys/resource.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <sys/ioctl.h>
+#include <sys/stat.h>
+#include <sys/socket.h>
+#include <sys/types.h>
+#include <stddef.h>
+#include <setjmp.h>
+#include <features.h>
+#include <dirent.h>
+#include <stdint.h>
+#include <sys/timeb.h>
+#include <pthread.h>
+#include <srbclient.h>
+
+
+int main(void){return 0;}
+
+Determining size of __int64 failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_0e544/fast && /usr/bin/make -f CMakeFiles/cmTC_0e544.dir/build.make CMakeFiles/cmTC_0e544.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_0e544.dir/H5_SIZEOF___INT64.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w    -o CMakeFiles/cmTC_0e544.dir/H5_SIZEOF___INT64.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/H5_SIZEOF___INT64.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/H5_SIZEOF___INT64.c:23:22: error: ‘__int64’ undeclared here (not in a function); did you mean ‘__int64_t’?
+   23 | #define SIZE (sizeof(__int64))
+      |                      ^~~~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/H5_SIZEOF___INT64.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_0e544.dir/build.make:66: CMakeFiles/cmTC_0e544.dir/H5_SIZEOF___INT64.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_0e544/fast] Error 2
+
+
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/H5_SIZEOF___INT64.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(__int64))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the variable CLOCK_MONOTONIC exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_fef0c/fast && /usr/bin/make -f CMakeFiles/cmTC_fef0c.dir/build.make CMakeFiles/cmTC_fef0c.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_fef0c.dir/CheckVariableExists.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w -DCHECK_VARIABLE_EXISTS=CLOCK_MONOTONIC   -o CMakeFiles/cmTC_fef0c.dir/CheckVariableExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckVariableExists.c
+Linking C executable cmTC_fef0c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fef0c.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_VARIABLE_EXISTS=CLOCK_MONOTONIC   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_fef0c.dir/CheckVariableExists.c.o  -o cmTC_fef0c  -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_fef0c.dir/CheckVariableExists.c.o: in function `main':
+CheckVariableExists.c:(.text+0x29): undefined reference to `CLOCK_MONOTONIC'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_fef0c.dir/build.make:87: cmTC_fef0c] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_fef0c/fast] Error 2
+
+
+
+Performing Other Test HAVE___TM_GMTOFF failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5efd3/fast && /usr/bin/make -f CMakeFiles/cmTC_5efd3.dir/build.make CMakeFiles/cmTC_5efd3.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5efd3.dir/HDF5Tests.c.o
+/usr/bin/cc   -w -w -DHAVE___TM_GMTOFF  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_5efd3.dir/HDF5Tests.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c:191:30: error: ‘struct tm’ has no member named ‘__tm_gmtoff’; did you mean ‘tm_gmtoff’?
+  191 | SIMPLE_TEST(struct tm tm; tm.__tm_gmtoff=0);
+      |                              ^~~~~~~~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c:1:36: note: in definition of macro ‘SIMPLE_TEST’
+    1 | #define SIMPLE_TEST(x) int main(){ x; return 0; }
+      |                                    ^
+make[1]: *** [CMakeFiles/cmTC_5efd3.dir/build.make:66: CMakeFiles/cmTC_5efd3.dir/HDF5Tests.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5efd3/fast] Error 2
+
+
+Performing Other Test HAVE_STRUCT_VIDEOCONFIG failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_e86a1/fast && /usr/bin/make -f CMakeFiles/cmTC_e86a1.dir/build.make CMakeFiles/cmTC_e86a1.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_e86a1.dir/HDF5Tests.c.o
+/usr/bin/cc   -w -w -DHAVE_STRUCT_VIDEOCONFIG  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_e86a1.dir/HDF5Tests.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c:474:32: error: storage size of ‘w’ isn’t known
+  474 | SIMPLE_TEST(struct videoconfig w; w.numtextcols=0);
+      |                                ^
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c:1:36: note: in definition of macro ‘SIMPLE_TEST’
+    1 | #define SIMPLE_TEST(x) int main(){ x; return 0; }
+      |                                    ^
+make[1]: *** [CMakeFiles/cmTC_e86a1.dir/build.make:66: CMakeFiles/cmTC_e86a1.dir/HDF5Tests.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_e86a1/fast] Error 2
+
+
+Performing Other Test HAVE_STRUCT_TEXT_INFO failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a433a/fast && /usr/bin/make -f CMakeFiles/cmTC_a433a.dir/build.make CMakeFiles/cmTC_a433a.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a433a.dir/HDF5Tests.c.o
+/usr/bin/cc   -w -w -DHAVE_STRUCT_TEXT_INFO  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_a433a.dir/HDF5Tests.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c:480:30: error: storage size of ‘w’ isn’t known
+  480 | SIMPLE_TEST(struct text_info w; w.screenwidth=0);
+      |                              ^
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5Tests.c:1:36: note: in definition of macro ‘SIMPLE_TEST’
+    1 | #define SIMPLE_TEST(x) int main(){ x; return 0; }
+      |                                    ^
+make[1]: *** [CMakeFiles/cmTC_a433a.dir/build.make:66: CMakeFiles/cmTC_a433a.dir/HDF5Tests.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a433a/fast] Error 2
+
+
+Determining if the function _getvideoconfig exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a48a2/fast && /usr/bin/make -f CMakeFiles/cmTC_a48a2.dir/build.make CMakeFiles/cmTC_a48a2.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a48a2.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w -DCHECK_FUNCTION_EXISTS=_getvideoconfig   -o CMakeFiles/cmTC_a48a2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_a48a2
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a48a2.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=_getvideoconfig    -rdynamic CMakeFiles/cmTC_a48a2.dir/CheckFunctionExists.c.o  -o cmTC_a48a2  -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_a48a2.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_getvideoconfig'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_a48a2.dir/build.make:87: cmTC_a48a2] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a48a2/fast] Error 2
+
+
+
+Determining if the function gettextinfo exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_ae706/fast && /usr/bin/make -f CMakeFiles/cmTC_ae706.dir/build.make CMakeFiles/cmTC_ae706.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_ae706.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w -DCHECK_FUNCTION_EXISTS=gettextinfo   -o CMakeFiles/cmTC_ae706.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_ae706
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_ae706.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=gettextinfo    -rdynamic CMakeFiles/cmTC_ae706.dir/CheckFunctionExists.c.o  -o cmTC_ae706  -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_ae706.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `gettextinfo'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_ae706.dir/build.make:87: cmTC_ae706] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_ae706/fast] Error 2
+
+
+
+Determining if the function _scrsize exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_63aee/fast && /usr/bin/make -f CMakeFiles/cmTC_63aee.dir/build.make CMakeFiles/cmTC_63aee.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_63aee.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w -DCHECK_FUNCTION_EXISTS=_scrsize   -o CMakeFiles/cmTC_63aee.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_63aee
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63aee.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=_scrsize    -rdynamic CMakeFiles/cmTC_63aee.dir/CheckFunctionExists.c.o  -o cmTC_63aee  -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_63aee.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `_scrsize'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_63aee.dir/build.make:87: cmTC_63aee] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_63aee/fast] Error 2
+
+
+
+Determining if the function GetConsoleScreenBufferInfo exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9e2c9/fast && /usr/bin/make -f CMakeFiles/cmTC_9e2c9.dir/build.make CMakeFiles/cmTC_9e2c9.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9e2c9.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w -DCHECK_FUNCTION_EXISTS=GetConsoleScreenBufferInfo   -o CMakeFiles/cmTC_9e2c9.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_9e2c9
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e2c9.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=GetConsoleScreenBufferInfo    -rdynamic CMakeFiles/cmTC_9e2c9.dir/CheckFunctionExists.c.o  -o cmTC_9e2c9  -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_9e2c9.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `GetConsoleScreenBufferInfo'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_9e2c9.dir/build.make:87: cmTC_9e2c9] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9e2c9/fast] Error 2
+
+
+
+Determining if the function setsysinfo exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_8bc41/fast && /usr/bin/make -f CMakeFiles/cmTC_8bc41.dir/build.make CMakeFiles/cmTC_8bc41.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_8bc41.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w -DCHECK_FUNCTION_EXISTS=setsysinfo   -o CMakeFiles/cmTC_8bc41.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_8bc41
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_8bc41.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=setsysinfo    -rdynamic CMakeFiles/cmTC_8bc41.dir/CheckFunctionExists.c.o  -o cmTC_8bc41  -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_8bc41.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `setsysinfo'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_8bc41.dir/build.make:87: cmTC_8bc41] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_8bc41/fast] Error 2
+
+
+
+Determining if the function sigsetjmp exists failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_f458e/fast && /usr/bin/make -f CMakeFiles/cmTC_f458e.dir/build.make CMakeFiles/cmTC_f458e.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_f458e.dir/CheckFunctionExists.c.o
+/usr/bin/cc -D_BSD_SOURCE -D_DEFAULT_SOURCE -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE  -w -w -DCHECK_FUNCTION_EXISTS=sigsetjmp   -o CMakeFiles/cmTC_f458e.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_f458e
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f458e.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=sigsetjmp    -rdynamic CMakeFiles/cmTC_f458e.dir/CheckFunctionExists.c.o  -o cmTC_f458e  -lm -ldl 
+/usr/bin/ld: CMakeFiles/cmTC_f458e.dir/CheckFunctionExists.c.o: in function `main':
+CheckFunctionExists.c:(.text+0x14): undefined reference to `sigsetjmp'
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_f458e.dir/build.make:87: cmTC_f458e] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_f458e/fast] Error 2
+
+
+
+Performing CXX Test OLD_HEADER_FILENAME failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b83a8/fast && /usr/bin/make -f CMakeFiles/cmTC_b83a8.dir/build.make CMakeFiles/cmTC_b83a8.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_b83a8.dir/HDF5CXXTests.cpp.o
+/usr/bin/c++    -w -w -DOLD_HEADER_FILENAME  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_b83a8.dir/HDF5CXXTests.cpp.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5CXXTests.cpp
+Linking CXX executable cmTC_b83a8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b83a8.dir/link.txt --verbose=1
+/usr/bin/c++    -w -w -DOLD_HEADER_FILENAME  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_b83a8.dir/HDF5CXXTests.cpp.o  -o cmTC_b83a8  -lm -ldl 
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+
+
+Performing CXX Test H5_NO_NAMESPACE failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_dbe82/fast && /usr/bin/make -f CMakeFiles/cmTC_dbe82.dir/build.make CMakeFiles/cmTC_dbe82.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_dbe82.dir/HDF5CXXTests.cpp.o
+/usr/bin/c++    -w -w -DH5_NO_NAMESPACE  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_dbe82.dir/HDF5CXXTests.cpp.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5CXXTests.cpp
+Linking CXX executable cmTC_dbe82
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_dbe82.dir/link.txt --verbose=1
+/usr/bin/c++    -w -w -DH5_NO_NAMESPACE  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_dbe82.dir/HDF5CXXTests.cpp.o  -o cmTC_dbe82  -lm -ldl 
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+
+
+Performing CXX Test H5_NO_STD failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_436b5/fast && /usr/bin/make -f CMakeFiles/cmTC_436b5.dir/build.make CMakeFiles/cmTC_436b5.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_436b5.dir/HDF5CXXTests.cpp.o
+/usr/bin/c++    -w -w -DH5_NO_STD  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_436b5.dir/HDF5CXXTests.cpp.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5CXXTests.cpp
+Linking CXX executable cmTC_436b5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_436b5.dir/link.txt --verbose=1
+/usr/bin/c++    -w -w -DH5_NO_STD  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_436b5.dir/HDF5CXXTests.cpp.o  -o cmTC_436b5  -lm -ldl 
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+
+
+Performing CXX Test BOOL_NOTDEFINED failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_98ef0/fast && /usr/bin/make -f CMakeFiles/cmTC_98ef0.dir/build.make CMakeFiles/cmTC_98ef0.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_98ef0.dir/HDF5CXXTests.cpp.o
+/usr/bin/c++    -w -w -DBOOL_NOTDEFINED  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_98ef0.dir/HDF5CXXTests.cpp.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5CXXTests.cpp
+Linking CXX executable cmTC_98ef0
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_98ef0.dir/link.txt --verbose=1
+/usr/bin/c++    -w -w -DBOOL_NOTDEFINED  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_98ef0.dir/HDF5CXXTests.cpp.o  -o cmTC_98ef0  -lm -ldl 
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+
+
+Performing CXX Test NO_STATIC_CAST failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_2b380/fast && /usr/bin/make -f CMakeFiles/cmTC_2b380.dir/build.make CMakeFiles/cmTC_2b380.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_2b380.dir/HDF5CXXTests.cpp.o
+/usr/bin/c++    -w -w -DNO_STATIC_CAST  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -o CMakeFiles/cmTC_2b380.dir/HDF5CXXTests.cpp.o -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/HDF5CXXTests.cpp
+Linking CXX executable cmTC_2b380
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2b380.dir/link.txt --verbose=1
+/usr/bin/c++    -w -w -DNO_STATIC_CAST  -DHAVE_SYS_TIME_H -DHAVE_UNISTD_H -DHAVE_SYS_TYPES_H -DHAVE_SYS_SOCKET_H -D_FILE_OFFSET_BITS=64 -D_LARGEFILE64_SOURCE -D_LARGEFILE_SOURCE   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_2b380.dir/HDF5CXXTests.cpp.o  -o cmTC_2b380  -lm -ldl 
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+
+
+Test H5_FP_TO_ULLONG_RIGHT_MAXIMUM Run failed with the following output and exit code:
+ Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/ThirdParty/hdf5/vtkhdf5/CMake/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_583b8/fast && /usr/bin/make -f CMakeFiles/cmTC_583b8.dir/build.make CMakeFiles/cmTC_583b8.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/ThirdParty/hdf5/vtkhdf5/CMake/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_583b8.dir/ConversionTests.c.o
+/usr/bin/cc   -w -w -DH5_FP_TO_ULLONG_RIGHT_MAXIMUM_TEST   -o CMakeFiles/cmTC_583b8.dir/ConversionTests.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/hdf5/vtkhdf5/config/cmake/ConversionTests.c
+Linking C executable cmTC_583b8
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_583b8.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DH5_FP_TO_ULLONG_RIGHT_MAXIMUM_TEST   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_583b8.dir/ConversionTests.c.o  -o cmTC_583b8 
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/ThirdParty/hdf5/vtkhdf5/CMake/CMakeFiles/CMakeTmp'
+
+
+Determining size of uchar failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_5031c/fast && /usr/bin/make -f CMakeFiles/cmTC_5031c.dir/build.make CMakeFiles/cmTC_5031c.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_5031c.dir/SIZEOF_UCHAR.c.o
+/usr/bin/cc   -w -w    -o CMakeFiles/cmTC_5031c.dir/SIZEOF_UCHAR.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:23:22: error: ‘uchar’ undeclared here (not in a function); did you mean ‘u_char’?
+   23 | #define SIZE (sizeof(uchar))
+      |                      ^~~~~
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:25:12: note: in expansion of macro ‘SIZE’
+   25 |   ('0' + ((SIZE / 10000)%10)),
+      |            ^~~~
+make[1]: *** [CMakeFiles/cmTC_5031c.dir/build.make:66: CMakeFiles/cmTC_5031c.dir/SIZEOF_UCHAR.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_5031c/fast] Error 2
+
+
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckTypeSize/SIZEOF_UCHAR.c:
+#include <sys/types.h>
+#include <stdint.h>
+#include <stddef.h>
+
+
+#undef KEY
+#if defined(__i386)
+# define KEY '_','_','i','3','8','6'
+#elif defined(__x86_64)
+# define KEY '_','_','x','8','6','_','6','4'
+#elif defined(__ppc__)
+# define KEY '_','_','p','p','c','_','_'
+#elif defined(__ppc64__)
+# define KEY '_','_','p','p','c','6','4','_','_'
+#elif defined(__aarch64__)
+# define KEY '_','_','a','a','r','c','h','6','4','_','_'
+#elif defined(__ARM_ARCH_7A__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','A','_','_'
+#elif defined(__ARM_ARCH_7S__)
+# define KEY '_','_','A','R','M','_','A','R','C','H','_','7','S','_','_'
+#endif
+
+#define SIZE (sizeof(uchar))
+static char info_size[] =  {'I', 'N', 'F', 'O', ':', 's','i','z','e','[',
+  ('0' + ((SIZE / 10000)%10)),
+  ('0' + ((SIZE / 1000)%10)),
+  ('0' + ((SIZE / 100)%10)),
+  ('0' + ((SIZE / 10)%10)),
+  ('0' +  (SIZE    % 10)),
+  ']',
+#ifdef KEY
+  ' ','k','e','y','[', KEY, ']',
+#endif
+  '\0'};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_size[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the function shl_load exists in the dld;dl failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_6e4df/fast && /usr/bin/make -f CMakeFiles/cmTC_6e4df.dir/build.make CMakeFiles/cmTC_6e4df.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_6e4df.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=shl_load   -o CMakeFiles/cmTC_6e4df.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6e4df
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6e4df.dir/link.txt --verbose=1
+/usr/bin/cc   -w -w -DCHECK_FUNCTION_EXISTS=shl_load   -Wl,--no-undefined -lc  -Wl,--no-undefined -lc    -rdynamic CMakeFiles/cmTC_6e4df.dir/CheckFunctionExists.c.o  -o cmTC_6e4df  -ldld -ldl 
+/usr/bin/ld: cannot find -ldld
+collect2: error: ld returned 1 exit status
+make[1]: *** [CMakeFiles/cmTC_6e4df.dir/build.make:87: cmTC_6e4df] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_6e4df/fast] Error 2
+
+
+
+Determining if files stdio.h;stddef.h;sys/types.h;inttypes.h;dlfcn.h;fcntl.h;malloc.h;memory.h;netdb.h;limits.h;sys/socket.h;netinet/in.h;sys/select.h;stdint.h;stdlib.h;string.h;strings.h;sys/stat.h;sys/time.h;time.h;unistd.h;signal.h;errno.h;ansidecl.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_00f57/fast && /usr/bin/make -f CMakeFiles/cmTC_00f57.dir/build.make CMakeFiles/cmTC_00f57.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_00f57.dir/HAVE_ANSIDECL_H.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_00f57.dir/HAVE_ANSIDECL_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_ANSIDECL_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_ANSIDECL_H.c:25:10: fatal error: ansidecl.h: No such file or directory
+   25 | #include <ansidecl.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_00f57.dir/build.make:66: CMakeFiles/cmTC_00f57.dir/HAVE_ANSIDECL_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_00f57/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <ansidecl.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;stddef.h;sys/types.h;inttypes.h;dlfcn.h;fcntl.h;malloc.h;memory.h;netdb.h;limits.h;sys/socket.h;netinet/in.h;sys/select.h;stdint.h;stdlib.h;string.h;strings.h;sys/stat.h;sys/time.h;time.h;unistd.h;signal.h;errno.h;arpa/inet.h;arpa/nameser.h;ctype.h;dirent.h;dl.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_cd4b0/fast && /usr/bin/make -f CMakeFiles/cmTC_cd4b0.dir/build.make CMakeFiles/cmTC_cd4b0.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_cd4b0.dir/HAVE_DL_H.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_cd4b0.dir/HAVE_DL_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_DL_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_DL_H.c:29:10: fatal error: dl.h: No such file or directory
+   29 | #include <dl.h>
+      |          ^~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_cd4b0.dir/build.make:66: CMakeFiles/cmTC_cd4b0.dir/HAVE_DL_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_cd4b0/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <dl.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;stddef.h;sys/types.h;inttypes.h;dlfcn.h;fcntl.h;malloc.h;memory.h;netdb.h;limits.h;sys/socket.h;netinet/in.h;sys/select.h;stdint.h;stdlib.h;string.h;strings.h;sys/stat.h;sys/time.h;time.h;unistd.h;signal.h;errno.h;arpa/inet.h;arpa/nameser.h;ctype.h;dirent.h;float.h;fp_class.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_b8028/fast && /usr/bin/make -f CMakeFiles/cmTC_b8028.dir/build.make CMakeFiles/cmTC_b8028.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_b8028.dir/HAVE_FP_CLASS_H.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_b8028.dir/HAVE_FP_CLASS_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_FP_CLASS_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_FP_CLASS_H.c:30:10: fatal error: fp_class.h: No such file or directory
+   30 | #include <fp_class.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_b8028.dir/build.make:66: CMakeFiles/cmTC_b8028.dir/HAVE_FP_CLASS_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_b8028/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <float.h>
+#include <fp_class.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;stddef.h;sys/types.h;inttypes.h;dlfcn.h;fcntl.h;malloc.h;memory.h;netdb.h;limits.h;sys/socket.h;netinet/in.h;sys/select.h;stdint.h;stdlib.h;string.h;strings.h;sys/stat.h;sys/time.h;time.h;unistd.h;signal.h;errno.h;arpa/inet.h;arpa/nameser.h;ctype.h;dirent.h;float.h;ieeefp.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_1bb0a/fast && /usr/bin/make -f CMakeFiles/cmTC_1bb0a.dir/build.make CMakeFiles/cmTC_1bb0a.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_1bb0a.dir/HAVE_IEEEFP_H.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_1bb0a.dir/HAVE_IEEEFP_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_IEEEFP_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_IEEEFP_H.c:30:10: fatal error: ieeefp.h: No such file or directory
+   30 | #include <ieeefp.h>
+      |          ^~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_1bb0a.dir/build.make:66: CMakeFiles/cmTC_1bb0a.dir/HAVE_IEEEFP_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_1bb0a/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <float.h>
+#include <ieeefp.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;stddef.h;sys/types.h;inttypes.h;dlfcn.h;fcntl.h;malloc.h;memory.h;netdb.h;limits.h;sys/socket.h;netinet/in.h;sys/select.h;stdint.h;stdlib.h;string.h;strings.h;sys/stat.h;sys/time.h;time.h;unistd.h;signal.h;errno.h;arpa/inet.h;arpa/nameser.h;ctype.h;dirent.h;float.h;math.h;nan.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_044ed/fast && /usr/bin/make -f CMakeFiles/cmTC_044ed.dir/build.make CMakeFiles/cmTC_044ed.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_044ed.dir/HAVE_NAN_H.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_044ed.dir/HAVE_NAN_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_NAN_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_NAN_H.c:31:10: fatal error: nan.h: No such file or directory
+   31 | #include <nan.h>
+      |          ^~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_044ed.dir/build.make:66: CMakeFiles/cmTC_044ed.dir/HAVE_NAN_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_044ed/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <float.h>
+#include <math.h>
+#include <nan.h>
+
+
+int main(void){return 0;}
+
+Determining if files stdio.h;stddef.h;sys/types.h;inttypes.h;dlfcn.h;fcntl.h;malloc.h;memory.h;netdb.h;limits.h;sys/socket.h;netinet/in.h;sys/select.h;stdint.h;stdlib.h;string.h;strings.h;sys/stat.h;sys/time.h;time.h;unistd.h;signal.h;errno.h;arpa/inet.h;arpa/nameser.h;ctype.h;dirent.h;float.h;math.h;ndir.h exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_c55f0/fast && /usr/bin/make -f CMakeFiles/cmTC_c55f0.dir/build.make CMakeFiles/cmTC_c55f0.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_c55f0.dir/HAVE_NDIR_H.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_c55f0.dir/HAVE_NDIR_H.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_NDIR_H.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CheckIncludeFiles/HAVE_NDIR_H.c:31:10: fatal error: ndir.h: No such file or directory
+   31 | #include <ndir.h>
+      |          ^~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_c55f0.dir/build.make:66: CMakeFiles/cmTC_c55f0.dir/HAVE_NDIR_H.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_c55f0/fast] Error 2
+
+
+Source:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <float.h>
+#include <math.h>
+#include <ndir.h>
+
+
+int main(void){return 0;}
+
+Determining if the fpclass exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_9a8f3/fast && /usr/bin/make -f CMakeFiles/cmTC_9a8f3.dir/build.make CMakeFiles/cmTC_9a8f3.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_9a8f3.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_9a8f3.dir/CheckSymbolExists.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:41:19: error: ‘fpclass’ undeclared (first use in this function); did you mean ‘p_class’?
+   41 |   return ((int*)(&fpclass))[argc];
+      |                   ^~~~~~~
+      |                   p_class
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:41:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_9a8f3.dir/build.make:66: CMakeFiles/cmTC_9a8f3.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_9a8f3/fast] Error 2
+
+
+File /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <float.h>
+#include <math.h>
+#include <pthread.h>
+#include <resolv.h>
+#include <stdarg.h>
+#include <sys/mman.h>
+#include <sys/timeb.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fpclass
+  return ((int*)(&fpclass))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the fp_class exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_97626/fast && /usr/bin/make -f CMakeFiles/cmTC_97626.dir/build.make CMakeFiles/cmTC_97626.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_97626.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_97626.dir/CheckSymbolExists.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:41:19: error: ‘fp_class’ undeclared (first use in this function); did you mean ‘p_class’?
+   41 |   return ((int*)(&fp_class))[argc];
+      |                   ^~~~~~~~
+      |                   p_class
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:41:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_97626.dir/build.make:66: CMakeFiles/cmTC_97626.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_97626/fast] Error 2
+
+
+File /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <float.h>
+#include <math.h>
+#include <pthread.h>
+#include <resolv.h>
+#include <stdarg.h>
+#include <sys/mman.h>
+#include <sys/timeb.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef fp_class
+  return ((int*)(&fp_class))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the _stat exist failed with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_a2862/fast && /usr/bin/make -f CMakeFiles/cmTC_a2862.dir/build.make CMakeFiles/cmTC_a2862.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a2862.dir/CheckSymbolExists.c.o
+/usr/bin/cc -D_GNU_SOURCE  -w -w    -o CMakeFiles/cmTC_a2862.dir/CheckSymbolExists.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c: In function ‘main’:
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:41:19: error: ‘_stat’ undeclared (first use in this function); did you mean ‘lstat’?
+   41 |   return ((int*)(&_stat))[argc];
+      |                   ^~~~~
+      |                   lstat
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:41:19: note: each undeclared identifier is reported only once for each function it appears in
+make[1]: *** [CMakeFiles/cmTC_a2862.dir/build.make:66: CMakeFiles/cmTC_a2862.dir/CheckSymbolExists.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_a2862/fast] Error 2
+
+
+File /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <stdio.h>
+#include <stddef.h>
+#include <sys/types.h>
+#include <inttypes.h>
+#include <dlfcn.h>
+#include <fcntl.h>
+#include <malloc.h>
+#include <memory.h>
+#include <netdb.h>
+#include <limits.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <sys/select.h>
+#include <stdint.h>
+#include <stdlib.h>
+#include <string.h>
+#include <strings.h>
+#include <sys/stat.h>
+#include <sys/time.h>
+#include <time.h>
+#include <unistd.h>
+#include <signal.h>
+#include <errno.h>
+#include <arpa/inet.h>
+#include <arpa/nameser.h>
+#include <ctype.h>
+#include <dirent.h>
+#include <float.h>
+#include <math.h>
+#include <pthread.h>
+#include <resolv.h>
+#include <stdarg.h>
+#include <sys/mman.h>
+#include <sys/timeb.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef _stat
+  return ((int*)(&_stat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Checking for DIR in sys/ndir.h failed to compile with the following output:
+Change Dir: /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/ThirdParty/libxml2/vtklibxml2/CMakeFiles/CMakeTmp
+
+Run Build Command(s):/usr/bin/make cmTC_4c1a4/fast && /usr/bin/make -f CMakeFiles/cmTC_4c1a4.dir/build.make CMakeFiles/cmTC_4c1a4.dir/build
+make[1]: Entering directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/ThirdParty/libxml2/vtklibxml2/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_4c1a4.dir/platformTestsC.c.o
+/usr/bin/cc -DTEST_HAVE_SYS_NDIR_H  -w -w    -o CMakeFiles/cmTC_4c1a4.dir/platformTestsC.c.o   -c /home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/libxml2/vtklibxml2/platformTestsC.c
+/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/ThirdParty/libxml2/vtklibxml2/platformTestsC.c:82:10: fatal error: sys/ndir.h: No such file or directory
+   82 | #include <sys/ndir.h>
+      |          ^~~~~~~~~~~~
+compilation terminated.
+make[1]: *** [CMakeFiles/cmTC_4c1a4.dir/build.make:66: CMakeFiles/cmTC_4c1a4.dir/platformTestsC.c.o] Error 1
+make[1]: Leaving directory '/home/nufeb_bo/NUFEB-dev-readdump/thirdparty/vtk-v8.0.0/vtk-build/ThirdParty/libxml2/vtklibxml2/CMakeFiles/CMakeTmp'
+make: *** [Makefile:121: cmTC_4c1a4/fast] Error 2
+
+
+
