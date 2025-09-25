@@ -25,7 +25,7 @@ bash ./install.sh
 ## Usage
 ```bash
 cd example
-mpirun -np 8 ./nufeb_mpi -in micp.nufeb > log.txt
+mpirun -np 8 ../nufeb_mpi -in micp.nufeb > log.txt
 ```
 
 
